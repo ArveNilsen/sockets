@@ -1,10 +1,10 @@
 #include <iostream>
 #include <arpa/inet.h>
 
-#include "RawSocket.hpp"
-#include "SocketFactory.hpp"
-#include "BoundSocket.hpp"
-#include "SysPolicy.hpp"
+#include <sockets/RawSocket.hpp>
+#include <sockets/SocketFactory.hpp>
+#include <sockets/BoundSocket.hpp>
+#include <sockets/SysPolicy.hpp>
 
 int main()
 {

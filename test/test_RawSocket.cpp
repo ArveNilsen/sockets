@@ -2,7 +2,7 @@
 
 #include <type_traits>
 
-#include "../src/RawSocket.hpp"
+#include <sockets/RawSocket.hpp>
 
 TEST_CASE("RawSocket not default constructible", "[RawSocket]") {
     REQUIRE(std::is_default_constructible<RawSocket>::value == false);

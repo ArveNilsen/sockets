@@ -4,10 +4,22 @@ find_package(Catch2 3 REQUIRED)
 include(CTest)
 include(Catch)
 
-add_executable(tests
-  tests.cpp
-  test_RawSocket.cpp
-  test_SocketFactory.cpp
+add_executable(tests)
+
+target_sources(tests
+    PRIVATE
+      tests.cpp
+      test_RawSocket.cpp
+      test_SocketFactory.cpp
+
+    PUBLIC
+        FILE_SET HEADERS
+        BASE_DIRS ../include
+        FILES
+            ../include/sockets/BoundSocket.hpp
+            ../include/sockets/RawSocket.hpp
+            ../include/sockets/SocketFactory.hpp
+            ../include/sockets/SysPolicy.hpp
 )
 
 catch_discover_tests(tests)
