@@ -16,4 +16,8 @@ struct SysPosix {
     int close(int fd) const noexcept {
         return ::close(fd);
     }
+
+    int bind(int fd, const sockaddr* addr, socklen_t len) const noexcept {
+        return ::bind(fd, addr, len);
+    }
 };
