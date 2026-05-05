@@ -6,7 +6,8 @@ include(Catch)
 
 add_executable(tests
   tests.cpp
-  test_Socket.cpp
+  test_RawSocket.cpp
+  test_SocketFactory.cpp
 )
 
 catch_discover_tests(tests)
