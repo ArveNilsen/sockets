@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <type_traits>
 
 struct RawSocket {
     using native_handle_type = int;
@@ -38,3 +39,5 @@ struct RawSocket {
 
     native_handle_type fd_{ - 1 };
 };
+
+static_assert(std::is_standard_layout_v<RawSocket>);
